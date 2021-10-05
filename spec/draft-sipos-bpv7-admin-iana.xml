@@ -34,7 +34,7 @@ It also makes a code point reservation for private or experimental use.
     <section anchor="sec-intro">
       <name>Introduction</name>
       <t>
-The earlier Bundle Protocol (BP) Version 6 (BPv6) defined an IANA sub-registry for Administrative Record type code points <xref target="IANA-BP"/>.
+The earlier Bundle Protocol (BP) Version 6 (BPv6) defined an IANA sub-registry for Administrative Record type code points under <xref target="IANA-BP"/>.
 When Bundle Protocol Version 7 (BPv7) was published in <xref target="I-D.ietf-dtn-bpbis"/> it included an explicit table of Administrative Record types but made no mention of an IANA registry nor a requirement for BPv7 agents to be extensible in how they handle Administrative Record types.
 The BPv7 specification also did not discriminate between code point reservations and unassigned ranges for Administrative Record types.
       </t>
@@ -52,6 +52,12 @@ This document does not specify how BPv6 and BPv7 can interoperate for overlappin
 It is up to each individual Administrative Record type specification to define how it relates to each BP version.
         </t>
       </section>
+      <section anchor="sec-terminology">
+        <name>Terminology</name>
+        <t>
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 <xref target="RFC2119"/> <xref target="RFC8174"/> when, and only when, they appear in all capitals, as shown here.
+        </t>
+      </section>
     </section>
     <section anchor="sec-bpv7-admin-type">
       <name>Administrative Record Types Registry</name>
@@ -59,7 +65,7 @@ It is up to each individual Administrative Record type specification to define h
 This document updates the requirements in <xref section="6.1" target="I-D.ietf-dtn-bpbis"/> to use an existing IANA registry and updates that sub-registry in <xref target="sec-iana-bp-admin-type"/>.
       </t>
       <t>
-Instead of using the explicit list of types in Table 3 of <xref target="I-D.ietf-dtn-bpbis"/>, a BPv7 Agent <bcp14>SHALL</bcp14> interpret Administrative Record type code values in accordance with the IANA "Administrative Record Types" sub-registry for entries having a "Bundle Protocol Version" of 7.
+Instead of using the explicit list of types in Table 3 of <xref target="I-D.ietf-dtn-bpbis"/>, a BPv7 Agent <bcp14>SHALL</bcp14> interpret Administrative Record type code values in accordance with the IANA "Bundle Administrative Record Types" sub-registry under <xref target="IANA-BP"/> for entries having a "Bundle Protocol Version" of 7.
       </t>
     </section>
     <section anchor="sec-security">
@@ -174,6 +180,8 @@ Within the "Bundle Protocol" registry <xref target="IANA-BP"/>, the following en
             <date/>
           </front>
         </reference>
+        <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.2119.xml"/>
+        <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.8174.xml"/>
         <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml-ids/reference.I-D.ietf-dtn-bpbis.xml"/>
       </references>
       <references>
