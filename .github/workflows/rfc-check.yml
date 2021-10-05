@@ -1,0 +1,33 @@
+name: RFC XML Check
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: dependencies
+      run: |
+        sudo apt-get install aspell cmake python3 python3-pip python3-setuptools python3-wheel xmlstarlet
+        sudo pip3 install xml2rfc
+    - name: xml2rfc
+      run: |
+        mkdir -p build
+        (cd build && cmake .. -DCMAKE_INSTALL_DOCDIR=$PWD/install)
+        cmake --build build -v --target install
+    - uses: actions/upload-artifact@v2
+      with:
+        name: spec
+        path: |
+          build/spec/draft-*.html
+          build/spec/draft-*.txt
+          build/spec/misspelling.txt
+          build/spec/*errors.txt
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.0
+      with:
+        branch: gh-pages # The branch the action should deploy to.
+        folder: build/install # The folder the action should deploy.
