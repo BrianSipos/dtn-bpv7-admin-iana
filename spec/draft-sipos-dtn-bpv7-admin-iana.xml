@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?rfc toc="yes"?>
-<rfc xmlns:xi="http://www.w3.org/2001/XInclude" category="std" consensus="true" docName="draft-sipos-dtn-bpv7-admin-iana-00" ipr="trust200902" submissionType="IETF" tocInclude="true" updates="-ietf-dtn-bpbis" version="3">
+<rfc xmlns:xi="http://www.w3.org/2001/XInclude" category="std" consensus="true" docName="draft-sipos-dtn-bpv7-admin-iana-01" ipr="trust200902" submissionType="IETF" tocInclude="true" updates="9171" version="3">
   <front>
     <title abbrev="BPv7 Admin IANA">
 Bundle Protocol Version 7 Administrative Record Types Registry
     </title>
-    <seriesInfo name="Internet-Draft" value="draft-sipos-dtn-bpv7-admin-iana-00"/>
+    <seriesInfo name="Internet-Draft" value="draft-sipos-dtn-bpv7-admin-iana-01"/>
     <author fullname="Brian Sipos" initials="B." surname="Sipos">
-      <organization abbrev="JHU APL">The Johns Hopkins University Applied Physics Laboratory</organization>
+      <organization abbrev="JHU/APL">The Johns Hopkins University Applied Physics Laboratory</organization>
       <address>
         <postal>
           <street>11100 Johns Hopkins Rd.</street>
@@ -35,11 +35,12 @@ It also makes a code point reservation for private or experimental use.
       <name>Introduction</name>
       <t>
 The earlier Bundle Protocol (BP) Version 6 (BPv6) defined an IANA sub-registry for Administrative Record type code points under <xref target="IANA-BP"/>.
-When Bundle Protocol Version 7 (BPv7) was published in <xref target="I-D.ietf-dtn-bpbis"/> it included an explicit table of Administrative Record types but made no mention of an IANA registry nor a requirement for BPv7 agents to be extensible in how they handle Administrative Record types.
+When Bundle Protocol Version 7 (BPv7) was published in <xref target="RFC9171"/> it included an explicit table of Administrative Record types but made no mention of an IANA registry nor a requirement for BPv7 agents to be extensible in how they handle Administrative Record types.
 The BPv7 specification also did not discriminate between code point reservations and unassigned ranges for Administrative Record types.
       </t>
       <t>
 This document updates BPv7 to explicitly use the IANA Administrative Record type registry in <xref target="sec-bpv7-admin-type"/>.
+This document makes a reservation of the zero value for consistency with BPv6.
 This document also makes a reservation of high-valued code points for private or experimental use to avoid collisions with assigned code points.
       </t>
       <section>
@@ -62,10 +63,14 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
     <section anchor="sec-bpv7-admin-type">
       <name>Administrative Record Types Registry</name>
       <t>
-This document updates the requirements in <xref section="6.1" target="I-D.ietf-dtn-bpbis"/> to use an existing IANA registry and updates that sub-registry in <xref target="sec-iana-bp-admin-type"/>.
+This document updates the requirements in <xref section="6.1" target="RFC9171"/> to use an existing IANA registry and updates that sub-registry in <xref target="sec-iana-bp-admin-type"/>.
       </t>
       <t>
-Instead of using the explicit list of types in Table 3 of <xref target="I-D.ietf-dtn-bpbis"/>, a BPv7 Agent <bcp14>SHALL</bcp14> interpret Administrative Record type code values in accordance with the IANA "Bundle Administrative Record Types" sub-registry under <xref target="IANA-BP"/> for entries having a "Bundle Protocol Version" of 7.
+The code point allocated in Annex D of <xref target="CCSDS-BP"/> was never added to the IANA registry.
+To avoid a collision, this document adds that allocation to the registry.
+      </t>
+      <t>
+Instead of using the explicit list of types in Table 3 of <xref target="RFC9171"/>, a BPv7 Agent <bcp14>SHALL</bcp14> interpret Administrative Record type code values in accordance with the IANA "Bundle Administrative Record Types" sub-registry under <xref target="IANA-BP"/> for entries having a "Bundle Protocol Version" of 7.
       </t>
     </section>
     <section anchor="sec-security">
@@ -74,7 +79,7 @@ Instead of using the explicit list of types in Table 3 of <xref target="I-D.ietf
 This document does not define any requirements or structures which introduce new security considerations.
       </t>
       <t>
-The existing security considerations of <xref target="I-D.ietf-dtn-bpbis"/> still apply when using the IANA Administrative Record Types sub-registry.
+The existing security considerations of <xref target="RFC9171"/> still apply when using the IANA Administrative Record Types sub-registry.
       </t>
     </section>
     <section anchor="sec-iana">
@@ -104,6 +109,7 @@ The existing sub-registry entries have been updated to have BP versions as in th
               <td>Reserved</td>
               <td>
                 <xref target="RFC7116"/>
+                [This specification]
               </td>
             </tr>
             <tr>
@@ -112,7 +118,7 @@ The existing sub-registry entries have been updated to have BP versions as in th
               <td>Bundle status report</td>
               <td>
                 <xref target="RFC5050"/>
-                <xref target="I-D.ietf-dtn-bpbis"/>
+                <xref target="RFC9171"/>
               </td>
             </tr>
             <tr>
@@ -125,7 +131,21 @@ The existing sub-registry entries have been updated to have BP versions as in th
             </tr>
             <tr>
               <td>6,7</td>
-              <td>3-15</td>
+              <td>3</td>
+              <td>Unassigned</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>4</td>
+              <td>Aggregate Custody Signal</td>
+              <td>
+                <xref target="CCSDS-BP"/>
+              </td>
+            </tr>
+            <tr>
+              <td>6,7</td>
+              <td>5-15</td>
               <td>Unassigned</td>
               <td/>
             </tr>
@@ -154,16 +174,11 @@ Within the "Bundle Protocol" registry <xref target="IANA-BP"/>, the following en
               <td>7</td>
               <td>greater than 65535</td>
               <td>Reserved for Private or Experimental Use</td>
-              <td>This specification</td>
+              <td>[This specification]</td>
             </tr>
           </tbody>
         </table>
       </section>
-    </section>
-    <section anchor="sec-doc-ack">
-      <name>Acknowledgments</name>
-      <t>
-      </t>
     </section>
   </middle>
   <back>
@@ -182,13 +197,28 @@ Within the "Bundle Protocol" registry <xref target="IANA-BP"/>, the following en
         </reference>
         <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.2119.xml"/>
         <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.8174.xml"/>
-        <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml-ids/reference.I-D.ietf-dtn-bpbis.xml"/>
+        <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.9171.xml"/>
       </references>
       <references>
         <name>Informative References</name>
+        <reference anchor="CCSDS-BP" target="https://www.ccsds.org">
+          <front>
+            <title>CCSDS Bundle Protocol Specification</title>
+            <seriesInfo name="CCSDS" value="734.2-B-1"/>
+            <author>
+              <organization>Consultative Committee for Space Data Systems</organization>
+            </author>
+            <date month="September" year="2015"/>
+          </front>
+        </reference>
         <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.5050.xml"/>
         <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7116.xml"/>
       </references>
     </references>
+    <section anchor="sec-doc-ack" numbered="false">
+      <name>Acknowledgments</name>
+      <t>
+      </t>
+    </section>
   </back>
 </rfc>
