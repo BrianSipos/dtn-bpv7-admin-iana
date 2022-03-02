@@ -3,14 +3,14 @@
 
 
 Delay-Tolerant Networking                                       B. Sipos
-Internet-Draft                                                   JHU APL
-Updates: -ietf-dtn-bpbis (if approved)                   14 October 2021
+Internet-Draft                                                   JHU/APL
+Updates: 9171 (if approved)                                 2 March 2022
 Intended status: Standards Track                                        
-Expires: 17 April 2022
+Expires: 3 September 2022
 
 
      Bundle Protocol Version 7 Administrative Record Types Registry
-                   draft-sipos-dtn-bpv7-admin-iana-00
+                   draft-sipos-dtn-bpv7-admin-iana-01
 
 Abstract
 
@@ -34,11 +34,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 17 April 2022.
+   This Internet-Draft will expire on 3 September 2022.
 
 Copyright Notice
 
-   Copyright (c) 2021 IETF Trust and the persons identified as the
+   Copyright (c) 2022 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -46,16 +46,16 @@ Copyright Notice
    license-info) in effect on the date of publication of this document.
    Please review these documents carefully, as they describe your rights
    and restrictions with respect to this document.  Code Components
-   extracted from this document must include Simplified BSD License text
-   as described in Section 4.e of the Trust Legal Provisions and are
-   provided without warranty as described in the Simplified BSD License.
+   extracted from this document must include Revised BSD License text as
+   described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Revised BSD License.
 
 
 
 
-Sipos                     Expires 17 April 2022                 [Page 1]
+Sipos                   Expires 3 September 2022                [Page 1]
 
-Internet-Draft               BPv7 Admin IANA                October 2021
+Internet-Draft               BPv7 Admin IANA                  March 2022
 
 
 Table of Contents
@@ -67,10 +67,10 @@ Table of Contents
    3.  Security Considerations . . . . . . . . . . . . . . . . . . .   3
    4.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   3
      4.1.  Bundle Administrative Record Types  . . . . . . . . . . .   3
-   5.  Acknowledgments . . . . . . . . . . . . . . . . . . . . . . .   4
-   6.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   4
-     6.1.  Normative References  . . . . . . . . . . . . . . . . . .   4
-     6.2.  Informative References  . . . . . . . . . . . . . . . . .   5
+   5.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   4
+     5.1.  Normative References  . . . . . . . . . . . . . . . . . .   4
+     5.2.  Informative References  . . . . . . . . . . . . . . . . .   5
+   Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . .   5
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   5
 
 1.  Introduction
@@ -78,17 +78,18 @@ Table of Contents
    The earlier Bundle Protocol (BP) Version 6 (BPv6) defined an IANA
    sub-registry for Administrative Record type code points under
    [IANA-BP].  When Bundle Protocol Version 7 (BPv7) was published in
-   [I-D.ietf-dtn-bpbis] it included an explicit table of Administrative
-   Record types but made no mention of an IANA registry nor a
-   requirement for BPv7 agents to be extensible in how they handle
-   Administrative Record types.  The BPv7 specification also did not
-   discriminate between code point reservations and unassigned ranges
-   for Administrative Record types.
+   [RFC9171] it included an explicit table of Administrative Record
+   types but made no mention of an IANA registry nor a requirement for
+   BPv7 agents to be extensible in how they handle Administrative Record
+   types.  The BPv7 specification also did not discriminate between code
+   point reservations and unassigned ranges for Administrative Record
+   types.
 
    This document updates BPv7 to explicitly use the IANA Administrative
-   Record type registry in Section 2.  This document also makes a
-   reservation of high-valued code points for private or experimental
-   use to avoid collisions with assigned code points.
+   Record type registry in Section 2.  This document makes a reservation
+   of the zero value for consistency with BPv6.  This document also
+   makes a reservation of high-valued code points for private or
+   experimental use to avoid collisions with assigned code points.
 
 1.1.  Scope
 
@@ -108,10 +109,9 @@ Table of Contents
 
 
 
-
-Sipos                     Expires 17 April 2022                 [Page 2]
+Sipos                   Expires 3 September 2022                [Page 2]
 
-Internet-Draft               BPv7 Admin IANA                October 2021
+Internet-Draft               BPv7 Admin IANA                  March 2022
 
 
 1.2.  Terminology
@@ -124,23 +124,27 @@ Internet-Draft               BPv7 Admin IANA                October 2021
 
 2.  Administrative Record Types Registry
 
-   This document updates the requirements in Section 6.1 of
-   [I-D.ietf-dtn-bpbis] to use an existing IANA registry and updates
-   that sub-registry in Section 4.1.
+   This document updates the requirements in Section 6.1 of [RFC9171] to
+   use an existing IANA registry and updates that sub-registry in
+   Section 4.1.
 
-   Instead of using the explicit list of types in Table 3 of
-   [I-D.ietf-dtn-bpbis], a BPv7 Agent SHALL interpret Administrative
-   Record type code values in accordance with the IANA "Bundle
-   Administrative Record Types" sub-registry under [IANA-BP] for entries
-   having a "Bundle Protocol Version" of 7.
+   The code point allocated in Annex D of [CCSDS-BP] was never added to
+   the IANA registry.  To avoid a collision, this document adds that
+   allocation to the registry.
+
+   Instead of using the explicit list of types in Table 3 of [RFC9171],
+   a BPv7 Agent SHALL interpret Administrative Record type code values
+   in accordance with the IANA "Bundle Administrative Record Types" sub-
+   registry under [IANA-BP] for entries having a "Bundle Protocol
+   Version" of 7.
 
 3.  Security Considerations
 
    This document does not define any requirements or structures which
    introduce new security considerations.
 
-   The existing security considerations of [I-D.ietf-dtn-bpbis] still
-   apply when using the IANA Administrative Record Types sub-registry.
+   The existing security considerations of [RFC9171] still apply when
+   using the IANA Administrative Record Types sub-registry.
 
 4.  IANA Considerations
 
@@ -161,29 +165,30 @@ Internet-Draft               BPv7 Admin IANA                October 2021
 
 
 
-
-
-
-
-Sipos                     Expires 17 April 2022                 [Page 3]
+Sipos                   Expires 3 September 2022                [Page 3]
 
-Internet-Draft               BPv7 Admin IANA                October 2021
+Internet-Draft               BPv7 Admin IANA                  March 2022
 
 
-    +=================+=======+===============+======================+
-    | Bundle Protocol | Value | Description   | Reference            |
-    | Version         |       |               |                      |
-    +=================+=======+===============+======================+
-    | 6,7             | 0     | Reserved      | [RFC7116]            |
-    +-----------------+-------+---------------+----------------------+
-    | 6,7             | 1     | Bundle status | [RFC5050]            |
-    |                 |       | report        | [I-D.ietf-dtn-bpbis] |
-    +-----------------+-------+---------------+----------------------+
-    | 6               | 2     | Custody       | [RFC5050]            |
-    |                 |       | signal        |                      |
-    +-----------------+-------+---------------+----------------------+
-    | 6,7             | 3-15  | Unassigned    |                      |
-    +-----------------+-------+---------------+----------------------+
+      +=================+=======+================+=================+
+      | Bundle Protocol | Value | Description    | Reference       |
+      | Version         |       |                |                 |
+      +=================+=======+================+=================+
+      | 6,7             | 0     | Reserved       | [RFC7116] [This |
+      |                 |       |                | specification]  |
+      +-----------------+-------+----------------+-----------------+
+      | 6,7             | 1     | Bundle status  | [RFC5050]       |
+      |                 |       | report         | [RFC9171]       |
+      +-----------------+-------+----------------+-----------------+
+      | 6               | 2     | Custody signal | [RFC5050]       |
+      +-----------------+-------+----------------+-----------------+
+      | 6,7             | 3     | Unassigned     |                 |
+      +-----------------+-------+----------------+-----------------+
+      | 6               | 4     | Aggregate      | [CCSDS-BP]      |
+      |                 |       | Custody Signal |                 |
+      +-----------------+-------+----------------+-----------------+
+      | 6,7             | 5-15  | Unassigned     |                 |
+      +-----------------+-------+----------------+-----------------+
 
                                  Table 1
 
@@ -191,53 +196,54 @@ Internet-Draft               BPv7 Admin IANA                October 2021
    entries have been added to the "Bundle Administrative Record Types"
    sub-registry.
 
-    +=================+============+==================+===============+
-    | Bundle Protocol | Value      | Description      | Reference     |
-    | Version         |            |                  |               |
-    +=================+============+==================+===============+
-    | 7               | 16-65535   | Unassigned       |               |
-    +-----------------+------------+------------------+---------------+
-    | 7               | greater    | Reserved for     | This          |
-    |                 | than 65535 | Private or       | specification |
-    |                 |            | Experimental Use |               |
-    +-----------------+------------+------------------+---------------+
+   +=================+============+==================+================+
+   | Bundle Protocol | Value      | Description      | Reference      |
+   | Version         |            |                  |                |
+   +=================+============+==================+================+
+   | 7               | 16-65535   | Unassigned       |                |
+   +-----------------+------------+------------------+----------------+
+   | 7               | greater    | Reserved for     | [This          |
+   |                 | than 65535 | Private or       | specification] |
+   |                 |            | Experimental Use |                |
+   +-----------------+------------+------------------+----------------+
 
-                                  Table 2
+                                 Table 2
 
-5.  Acknowledgments
+5.  References
 
-
-6.  References
-
-6.1.  Normative References
+5.1.  Normative References
 
    [IANA-BP]  IANA, "Bundle Protocol",
               <https://www.iana.org/assignments/bundle/>.
+
+
+
+
+
+
+Sipos                   Expires 3 September 2022                [Page 4]
+
+Internet-Draft               BPv7 Admin IANA                  March 2022
+
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
               DOI 10.17487/RFC2119, March 1997,
               <https://www.rfc-editor.org/info/rfc2119>.
 
-
-
-Sipos                     Expires 17 April 2022                 [Page 4]
-
-Internet-Draft               BPv7 Admin IANA                October 2021
-
-
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/info/rfc8174>.
 
-   [I-D.ietf-dtn-bpbis]
-              Burleigh, S., Fall, K., and E. J. Birrane, "Bundle
-              Protocol Version 7", Work in Progress, Internet-Draft,
-              draft-ietf-dtn-bpbis-31, 25 January 2021,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-dtn-
-              bpbis-31>.
+   [RFC9171]  Burleigh, S., Fall, K., Birrane, E., and , "Bundle
+              Protocol Version 7", RFC 9171, DOI 10.17487/RFC9171,
+              January 2022, <https://www.rfc-editor.org/info/rfc9171>.
 
-6.2.  Informative References
+5.2.  Informative References
+
+   [CCSDS-BP] Consultative Committee for Space Data Systems, "CCSDS
+              Bundle Protocol Specification", CCSDS 734.2-B-1, September
+              2015, <https://www.ccsds.org>.
 
    [RFC5050]  Scott, K. and S. Burleigh, "Bundle Protocol
               Specification", RFC 5050, DOI 10.17487/RFC5050, November
@@ -249,6 +255,9 @@ Internet-Draft               BPv7 Admin IANA                October 2021
               DOI 10.17487/RFC7116, February 2014,
               <https://www.rfc-editor.org/info/rfc7116>.
 
+Acknowledgments
+
+
 Author's Address
 
    Brian Sipos
@@ -256,7 +265,6 @@ Author's Address
    11100 Johns Hopkins Rd.
    Laurel, MD 20723
    United States of America
-
    Email: brian.sipos+ietf@gmail.com
 
 
@@ -269,12 +277,4 @@ Author's Address
 
 
 
-
-
-
-
-
-
-
-
-Sipos                     Expires 17 April 2022                 [Page 5]
+Sipos                   Expires 3 September 2022                [Page 5]
