@@ -4,13 +4,13 @@
 
 Delay-Tolerant Networking                                       B. Sipos
 Internet-Draft                                                   JHU/APL
-Updates: 9171 (if approved)                                 2 March 2022
+Updates: 9171 (if approved)                            12 September 2022
 Intended status: Standards Track                                        
-Expires: 3 September 2022
+Expires: 16 March 2023
 
 
      Bundle Protocol Version 7 Administrative Record Types Registry
-                   draft-sipos-dtn-bpv7-admin-iana-01
+                   draft-sipos-dtn-bpv7-admin-iana-02
 
 Abstract
 
@@ -34,7 +34,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 September 2022.
+   This Internet-Draft will expire on 16 March 2023.
 
 Copyright Notice
 
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Sipos                   Expires 3 September 2022                [Page 1]
+Sipos                     Expires 16 March 2023                 [Page 1]
 
-Internet-Draft               BPv7 Admin IANA                  March 2022
+Internet-Draft               BPv7 Admin IANA              September 2022
 
 
 Table of Contents
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Sipos                   Expires 3 September 2022                [Page 2]
+Sipos                     Expires 16 March 2023                 [Page 2]
 
-Internet-Draft               BPv7 Admin IANA                  March 2022
+Internet-Draft               BPv7 Admin IANA              September 2022
 
 
 1.2.  Terminology
@@ -154,9 +154,9 @@ Internet-Draft               BPv7 Admin IANA                  March 2022
 
    Within the "Bundle Protocol" registry [IANA-BP], the "Bundle
    Administrative Record Types" sub-registry has been updated to include
-   a leftmost "Bundle Protocol Version" column.  The existing sub-
-   registry entries have been updated to have BP versions as in the
-   following table.
+   a leftmost "Bundle Protocol Version" column.  New entries have been
+   added and existing entries have been updated to have BP versions as
+   in the following table.
 
 
 
@@ -165,49 +165,38 @@ Internet-Draft               BPv7 Admin IANA                  March 2022
 
 
 
-Sipos                   Expires 3 September 2022                [Page 3]
+Sipos                     Expires 16 March 2023                 [Page 3]
 
-Internet-Draft               BPv7 Admin IANA                  March 2022
+Internet-Draft               BPv7 Admin IANA              September 2022
 
 
-      +=================+=======+================+=================+
-      | Bundle Protocol | Value | Description    | Reference       |
-      | Version         |       |                |                 |
-      +=================+=======+================+=================+
-      | 6,7             | 0     | Reserved       | [RFC7116] [This |
-      |                 |       |                | specification]  |
-      +-----------------+-------+----------------+-----------------+
-      | 6,7             | 1     | Bundle status  | [RFC5050]       |
-      |                 |       | report         | [RFC9171]       |
-      +-----------------+-------+----------------+-----------------+
-      | 6               | 2     | Custody signal | [RFC5050]       |
-      +-----------------+-------+----------------+-----------------+
-      | 6,7             | 3     | Unassigned     |                 |
-      +-----------------+-------+----------------+-----------------+
-      | 6               | 4     | Aggregate      | [CCSDS-BP]      |
-      |                 |       | Custody Signal |                 |
-      +-----------------+-------+----------------+-----------------+
-      | 6,7             | 5-15  | Unassigned     |                 |
-      +-----------------+-------+----------------+-----------------+
+   +=================+============+==================+=================+
+   | Bundle Protocol | Value      | Description      | Reference       |
+   | Version         |            |                  |                 |
+   +=================+============+==================+=================+
+   | 6,7             | 0          | Reserved         | [RFC7116] [This |
+   |                 |            |                  | specification]  |
+   +-----------------+------------+------------------+-----------------+
+   | 6,7             | 1          | Bundle status    | [RFC5050]       |
+   |                 |            | report           | [RFC9171]       |
+   +-----------------+------------+------------------+-----------------+
+   | 6               | 2          | Custody signal   | [RFC5050]       |
+   +-----------------+------------+------------------+-----------------+
+   | 6,7             | 3          | Unassigned       |                 |
+   +-----------------+------------+------------------+-----------------+
+   | 6               | 4          | Aggregate        | [CCSDS-BP]      |
+   |                 |            | Custody Signal   |                 |
+   +-----------------+------------+------------------+-----------------+
+   | 6,7             | 5-15       | Unassigned       |                 |
+   +-----------------+------------+------------------+-----------------+
+   | 7               | 16-65535   | Unassigned       |                 |
+   +-----------------+------------+------------------+-----------------+
+   | 7               | greater    | Reserved for     | [This           |
+   |                 | than       | Private or       | specification]  |
+   |                 | 65535      | Experimental Use |                 |
+   +-----------------+------------+------------------+-----------------+
 
-                                 Table 1
-
-   Within the "Bundle Protocol" registry [IANA-BP], the following
-   entries have been added to the "Bundle Administrative Record Types"
-   sub-registry.
-
-   +=================+============+==================+================+
-   | Bundle Protocol | Value      | Description      | Reference      |
-   | Version         |            |                  |                |
-   +=================+============+==================+================+
-   | 7               | 16-65535   | Unassigned       |                |
-   +-----------------+------------+------------------+----------------+
-   | 7               | greater    | Reserved for     | [This          |
-   |                 | than 65535 | Private or       | specification] |
-   |                 |            | Experimental Use |                |
-   +-----------------+------------+------------------+----------------+
-
-                                 Table 2
+                Table 1: Bundle Administrative Record Types
 
 5.  References
 
@@ -215,16 +204,6 @@ Internet-Draft               BPv7 Admin IANA                  March 2022
 
    [IANA-BP]  IANA, "Bundle Protocol",
               <https://www.iana.org/assignments/bundle/>.
-
-
-
-
-
-
-Sipos                   Expires 3 September 2022                [Page 4]
-
-Internet-Draft               BPv7 Admin IANA                  March 2022
-
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -235,9 +214,17 @@ Internet-Draft               BPv7 Admin IANA                  March 2022
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/info/rfc8174>.
 
-   [RFC9171]  Burleigh, S., Fall, K., Birrane, E., and , "Bundle
+   [RFC9171]  Burleigh, S., Fall, K., Birrane, E., and III, "Bundle
               Protocol Version 7", RFC 9171, DOI 10.17487/RFC9171,
               January 2022, <https://www.rfc-editor.org/info/rfc9171>.
+
+
+
+
+Sipos                     Expires 16 March 2023                 [Page 4]
+
+Internet-Draft               BPv7 Admin IANA              September 2022
+
 
 5.2.  Informative References
 
@@ -277,4 +264,17 @@ Author's Address
 
 
 
-Sipos                   Expires 3 September 2022                [Page 5]
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sipos                     Expires 16 March 2023                 [Page 5]

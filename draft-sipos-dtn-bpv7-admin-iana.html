@@ -12,23 +12,22 @@ This document clarifies that a Bundle Protocol Version 7 agent is intended to us
 It also makes a code point reservation for private or experimental use.
        
     " name="description">
-<meta content="xml2rfc 3.12.3" name="generator">
+<meta content="xml2rfc 3.14.2" name="generator">
 <meta content="DTN" name="keyword">
-<meta content="draft-sipos-dtn-bpv7-admin-iana-01" name="ietf.draft">
+<meta content="draft-sipos-dtn-bpv7-admin-iana-02" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.12.3
+  xml2rfc 3.14.2
     Python 3.8.10
     appdirs 1.4.4
     ConfigArgParse 1.5.3
-    google-i18n-address 2.5.0
+    google-i18n-address 2.5.2
     html5lib 1.1
     intervaltree 3.1.0
-    Jinja2 2.11.3
+    Jinja2 3.1.2
     kitchen 1.2.6
-    lxml 4.8.0
-    MarkupSafe 2.0.1
-    pycountry 22.1.10
-    pyflakes 2.4.0
+    lxml 4.9.1
+    MarkupSafe 2.1.1
+    pycountry 22.3.5
     PyYAML 5.3.1
     requests 2.22.0
     setuptools 45.2.0
@@ -174,11 +173,8 @@ svg {
   margin: 1em 0;
 }
 .alignCenter > *:first-child {
-  border: none;
-  /* this isn't optimal, but it's an existence proof.  PrinceXML doesn't
-     support flexbox yet.
-  */
   display: table;
+  border: none;
   margin: 0 auto;
 }
 
@@ -658,6 +654,9 @@ hr.addr {
   figure {
     overflow: scroll;
   }
+  pre.breakable {
+    break-inside: auto;
+  }
   h1, h2, h3, h4, h5, h6 {
     page-break-after: avoid;
   }
@@ -1069,6 +1068,9 @@ table {
 td {
   border-top: 1px solid #ddd;
 }
+tr {
+  break-inside: avoid;
+}
 tr:nth-child(2n+1) > td {
   background-color: #f8f8f8;
 }
@@ -1189,11 +1191,11 @@ li > p:last-of-type {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">BPv7 Admin IANA</td>
-<td class="right">March 2022</td>
+<td class="right">September 2022</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Sipos</td>
-<td class="center">Expires 3 September 2022</td>
+<td class="center">Expires 16 March 2023</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1203,18 +1205,18 @@ li > p:last-of-type {
 <dt class="label-workgroup">Workgroup:</dt>
 <dd class="workgroup">Delay-Tolerant Networking</dd>
 <dt class="label-internet-draft">Internet-Draft:</dt>
-<dd class="internet-draft">draft-sipos-dtn-bpv7-admin-iana-01</dd>
+<dd class="internet-draft">draft-sipos-dtn-bpv7-admin-iana-02</dd>
 <dt class="label-updates">Updates:</dt>
 <dd class="updates">
 <a href="https://www.rfc-editor.org/rfc/rfc9171" class="eref">9171</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2022-03-02" class="published">2 March 2022</time>
+<time datetime="2022-09-12" class="published">12 September 2022</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2022-09-03">3 September 2022</time></dd>
+<dd class="expires"><time datetime="2023-03-16">16 March 2023</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1250,7 +1252,7 @@ It also makes a code point reservation for private or experimental use.<a href="
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 3 September 2022.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 16 March 2023.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1398,9 +1400,12 @@ This specification modifies a BPv6 sub-registry to extend BPv7.<a href="#section
         </h3>
 <p id="section-4.1-1">
 Within the "Bundle Protocol" registry <span>[<a href="#IANA-BP" class="xref">IANA-BP</a>]</span>, the "Bundle Administrative Record Types" sub-registry has been updated to include a leftmost "Bundle Protocol Version" column.
-The existing sub-registry entries have been updated to have BP versions as in the following table.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
-<table class="center" id="table-1">
-          <caption><a href="#table-1" class="selfRef">Table 1</a></caption>
+New entries have been added and existing entries have been updated to have BP versions as in the following table.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
+<span id="name-bundle-administrative-record"></span><table class="center" id="table-1">
+          <caption>
+<a href="#table-1" class="selfRef">Table 1</a>:
+<a href="#name-bundle-administrative-record" class="selfRef">Bundle Administrative Record Types</a>
+          </caption>
 <thead>
             <tr>
               <th class="text-left" rowspan="1" colspan="1">Bundle Protocol Version</th>
@@ -1456,21 +1461,6 @@ The existing sub-registry entries have been updated to have BP versions as in th
               <td class="text-left" rowspan="1" colspan="1">Unassigned</td>
               <td class="text-left" rowspan="1" colspan="1"></td>
             </tr>
-          </tbody>
-        </table>
-<p id="section-4.1-3">
-Within the "Bundle Protocol" registry <span>[<a href="#IANA-BP" class="xref">IANA-BP</a>]</span>, the following entries have been added to the "Bundle Administrative Record Types" sub-registry.<a href="#section-4.1-3" class="pilcrow">¶</a></p>
-<table class="center" id="table-2">
-          <caption><a href="#table-2" class="selfRef">Table 2</a></caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Bundle Protocol Version</th>
-              <th class="text-left" rowspan="1" colspan="1">Value</th>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Reference</th>
-            </tr>
-          </thead>
-          <tbody>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">7</td>
               <td class="text-left" rowspan="1" colspan="1">16-65535</td>
@@ -1512,7 +1502,7 @@ Within the "Bundle Protocol" registry <span>[<a href="#IANA-BP" class="xref">IAN
 <dd class="break"></dd>
 <dt id="RFC9171">[RFC9171]</dt>
       <dd>
-<span class="refAuthor">Burleigh, S.</span>, <span class="refAuthor">Fall, K.</span>, <span class="refAuthor">Birrane, E.</span>, and <span class="refAuthor">III.</span>, <span class="refTitle">"Bundle Protocol Version 7"</span>, <span class="seriesInfo">RFC 9171</span>, <span class="seriesInfo">DOI 10.17487/RFC9171</span>, <time datetime="2022-01" class="refDate">January 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc9171">https://www.rfc-editor.org/info/rfc9171</a>&gt;</span>. </dd>
+<span class="refAuthor">Burleigh, S.</span>, <span class="refAuthor">Fall, K.</span>, <span class="refAuthor">Birrane, E.</span>, and <span class="refAuthor">III</span>, <span class="refTitle">"Bundle Protocol Version 7"</span>, <span class="seriesInfo">RFC 9171</span>, <span class="seriesInfo">DOI 10.17487/RFC9171</span>, <time datetime="2022-01" class="refDate">January 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc9171">https://www.rfc-editor.org/info/rfc9171</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>
