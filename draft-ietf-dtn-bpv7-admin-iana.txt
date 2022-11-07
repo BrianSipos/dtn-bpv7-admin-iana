@@ -4,13 +4,12 @@
 
 Delay-Tolerant Networking                                       B. Sipos
 Internet-Draft                                                   JHU/APL
-Updates: 9171 (if approved)                            12 September 2022
+Updates: 9171 (if approved)                              7 November 2022
 Intended status: Standards Track                                        
-Expires: 16 March 2023
+Expires: 11 May 2023
 
 
      Bundle Protocol Version 7 Administrative Record Types Registry
-                   draft-sipos-dtn-bpv7-admin-iana-02
 
 Abstract
 
@@ -34,7 +33,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 16 March 2023.
+   This Internet-Draft will expire on 11 May 2023.
 
 Copyright Notice
 
@@ -53,9 +52,10 @@ Copyright Notice
 
 
 
-Sipos                     Expires 16 March 2023                 [Page 1]
+
+Sipos                      Expires 11 May 2023                  [Page 1]
 
-Internet-Draft               BPv7 Admin IANA              September 2022
+Internet-Draft               BPv7 Admin IANA               November 2022
 
 
 Table of Contents
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Sipos                     Expires 16 March 2023                 [Page 2]
+Sipos                      Expires 11 May 2023                  [Page 2]
 
-Internet-Draft               BPv7 Admin IANA              September 2022
+Internet-Draft               BPv7 Admin IANA               November 2022
 
 
 1.2.  Terminology
@@ -165,9 +165,9 @@ Internet-Draft               BPv7 Admin IANA              September 2022
 
 
 
-Sipos                     Expires 16 March 2023                 [Page 3]
+Sipos                      Expires 11 May 2023                  [Page 3]
 
-Internet-Draft               BPv7 Admin IANA              September 2022
+Internet-Draft               BPv7 Admin IANA               November 2022
 
 
    +=================+============+==================+=================+
@@ -214,23 +214,23 @@ Internet-Draft               BPv7 Admin IANA              September 2022
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/info/rfc8174>.
 
-   [RFC9171]  Burleigh, S., Fall, K., Birrane, E., and III, "Bundle
+   [RFC9171]  Burleigh, S., Fall, K., and E. Birrane, III, "Bundle
               Protocol Version 7", RFC 9171, DOI 10.17487/RFC9171,
               January 2022, <https://www.rfc-editor.org/info/rfc9171>.
 
 
 
 
-Sipos                     Expires 16 March 2023                 [Page 4]
+Sipos                      Expires 11 May 2023                  [Page 4]
 
-Internet-Draft               BPv7 Admin IANA              September 2022
+Internet-Draft               BPv7 Admin IANA               November 2022
 
 
 5.2.  Informative References
 
    [CCSDS-BP] Consultative Committee for Space Data Systems, "CCSDS
               Bundle Protocol Specification", CCSDS 734.2-B-1, September
-              2015, <https://www.ccsds.org>.
+              2015, <https://public.ccsds.org/Pubs/734x2b1.pdf>.
 
    [RFC5050]  Scott, K. and S. Burleigh, "Bundle Protocol
               Specification", RFC 5050, DOI 10.17487/RFC5050, November
@@ -277,4 +277,4 @@ Author's Address
 
 
 
-Sipos                     Expires 16 March 2023                 [Page 5]
+Sipos                      Expires 11 May 2023                  [Page 5]
