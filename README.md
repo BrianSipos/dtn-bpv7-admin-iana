@@ -2,7 +2,7 @@
 
 The internet-draft is hosted at [draft-sipos-dtn-bpv7-admin-iana](https://datatracker.ietf.org/doc/draft-sipos-dtn-bpv7-admin-iana/).
 
-A local build of the current main branch is available [draft-sipos-dtn-bpv7-admin-iana.html](https://briansipos.github.io/dtn-bpv7-admin-iana/draft-sipos-dtn-bpv7-admin-iana.html).
+A local build of the current main branch is available [draft-ietf-dtn-bpv7-admin-iana.html](https://briansipos.github.io/dtn-bpv7-admin-iana/draft-ietf-dtn-bpv7-admin-iana.html) with its [misspelling.txt](https://briansipos.github.io/dtn-bpv7-admin-iana/misspelling.txt).
 
 Prerequisites to building can be installed on Ubuntu with:
 ```
