@@ -4,13 +4,13 @@
 
 Delay-Tolerant Networking                                       B. Sipos
 Internet-Draft                                                   JHU/APL
-Updates: 9171 (if approved)                              7 November 2022
+Updates: 9171 (if approved)                                 7 March 2023
 Intended status: Standards Track                                        
-Expires: 11 May 2023
+Expires: 8 September 2023
 
 
      Bundle Protocol Version 7 Administrative Record Types Registry
-                   draft-ietf-dtn-bpv7-admin-iana-00
+                   draft-ietf-dtn-bpv7-admin-iana-01
 
 Abstract
 
@@ -34,11 +34,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 11 May 2023.
+   This Internet-Draft will expire on 8 September 2023.
 
 Copyright Notice
 
-   Copyright (c) 2022 IETF Trust and the persons identified as the
+   Copyright (c) 2023 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Sipos                      Expires 11 May 2023                  [Page 1]
+Sipos                   Expires 8 September 2023                [Page 1]
 
-Internet-Draft               BPv7 Admin IANA               November 2022
+Internet-Draft               BPv7 Admin IANA                  March 2023
 
 
 Table of Contents
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Sipos                      Expires 11 May 2023                  [Page 2]
+Sipos                   Expires 8 September 2023                [Page 2]
 
-Internet-Draft               BPv7 Admin IANA               November 2022
+Internet-Draft               BPv7 Admin IANA                  March 2023
 
 
 1.2.  Terminology
@@ -156,7 +156,8 @@ Internet-Draft               BPv7 Admin IANA               November 2022
    Administrative Record Types" sub-registry has been updated to include
    a leftmost "Bundle Protocol Version" column.  New entries have been
    added and existing entries have been updated to have BP versions as
-   in the following table.
+   in the following table.  This document makes no changes to the
+   registration procedures for this sub-registry.
 
 
 
@@ -164,10 +165,9 @@ Internet-Draft               BPv7 Admin IANA               November 2022
 
 
 
-
-Sipos                      Expires 11 May 2023                  [Page 3]
+Sipos                   Expires 8 September 2023                [Page 3]
 
-Internet-Draft               BPv7 Admin IANA               November 2022
+Internet-Draft               BPv7 Admin IANA                  March 2023
 
 
    +=================+============+==================+=================+
@@ -221,9 +221,9 @@ Internet-Draft               BPv7 Admin IANA               November 2022
 
 
 
-Sipos                      Expires 11 May 2023                  [Page 4]
+Sipos                   Expires 8 September 2023                [Page 4]
 
-Internet-Draft               BPv7 Admin IANA               November 2022
+Internet-Draft               BPv7 Admin IANA                  March 2023
 
 
 5.2.  Informative References
@@ -277,4 +277,4 @@ Author's Address
 
 
 
-Sipos                      Expires 11 May 2023                  [Page 5]
+Sipos                   Expires 8 September 2023                [Page 5]
