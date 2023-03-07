@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?rfc toc="yes"?>
-<rfc xmlns:xi="http://www.w3.org/2001/XInclude" category="std" consensus="true" docName="draft-ietf-dtn-bpv7-admin-iana-00" ipr="trust200902" submissionType="IETF" tocInclude="true" updates="9171" version="3">
+<rfc xmlns:xi="http://www.w3.org/2001/XInclude" category="std" consensus="true" docName="draft-ietf-dtn-bpv7-admin-iana-01" ipr="trust200902" submissionType="IETF" tocInclude="true" updates="9171" version="3">
   <front>
     <title abbrev="BPv7 Admin IANA">
 Bundle Protocol Version 7 Administrative Record Types Registry
     </title>
-    <seriesInfo name="Internet-Draft" value="draft-ietf-dtn-bpv7-admin-iana-00"/>
+    <seriesInfo name="Internet-Draft" value="draft-ietf-dtn-bpv7-admin-iana-01"/>
     <author fullname="Brian Sipos" initials="B." surname="Sipos">
       <organization abbrev="JHU/APL">The Johns Hopkins University Applied Physics Laboratory</organization>
       <address>
@@ -92,6 +92,7 @@ This specification modifies a BPv6 sub-registry to extend BPv7.
         <t>
 Within the "Bundle Protocol" registry <xref target="IANA-BP"/>, the "Bundle Administrative Record Types" sub-registry has been updated to include a leftmost "Bundle Protocol Version" column.
 New entries have been added and existing entries have been updated to have BP versions as in the following table.
+This document makes no changes to the registration procedures for this sub-registry.
         </t>
         <table>
           <name>Bundle Administrative Record Types</name>
