@@ -141,8 +141,8 @@ Internet-Draft               BPv7 Admin IANA                 August 2023
    If an administrative element receives a not-well-formed ADU or an
    administrative record type code which is not able to be processed by
    the element, the record SHALL be ignored by the element.  The
-   processing of a received administrative record ADU do not affect the
-   fact that the bundle itself was delivered to the administrative
+   processing of a received administrative record ADU does not affect
+   the fact that the bundle itself was delivered to the administrative
    element or any related BPA processing of (e.g. status reports on) the
    enveloping bundle.
 
