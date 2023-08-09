@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?rfc toc="yes"?>
-<rfc xmlns:xi="http://www.w3.org/2001/XInclude" category="std" consensus="true" docName="draft-ietf-dtn-bpv7-admin-iana-01" ipr="trust200902" submissionType="IETF" tocInclude="true" updates="9171" version="3">
+<rfc xmlns:xi="http://www.w3.org/2001/XInclude" category="std" consensus="true" docName="draft-ietf-dtn-bpv7-admin-iana-02" ipr="trust200902" submissionType="IETF" tocInclude="true" updates="9171" version="3">
   <front>
     <title abbrev="BPv7 Admin IANA">
 Bundle Protocol Version 7 Administrative Record Types Registry
     </title>
-    <seriesInfo name="Internet-Draft" value="draft-ietf-dtn-bpv7-admin-iana-01"/>
+    <seriesInfo name="Internet-Draft" value="draft-ietf-dtn-bpv7-admin-iana-02"/>
     <author fullname="Brian Sipos" initials="B." surname="Sipos">
       <organization abbrev="JHU/APL">The Johns Hopkins University Applied Physics Laboratory</organization>
       <address>
@@ -70,7 +70,11 @@ The code point allocated in Annex D of <xref target="CCSDS-BP"/> was never added
 To avoid a collision, this document adds that allocation to the registry.
       </t>
       <t>
-Instead of using the explicit list of types in Table 3 of <xref target="RFC9171"/>, a BPv7 Agent <bcp14>SHALL</bcp14> interpret Administrative Record type code values in accordance with the IANA "Bundle Administrative Record Types" sub-registry under <xref target="IANA-BP"/> for entries having a "Bundle Protocol Version" of 7.
+Instead of using the explicit list of types in <xref section="6.1" target="RFC9171"/>, a BPv7 administrative element <bcp14>SHALL</bcp14> interpret administrative record type code values in accordance with the IANA "Bundle Administrative Record Types" sub-registry under <xref target="IANA-BP"/> for entries having a "Bundle Protocol Version" of 7.
+      </t>
+      <t>
+If an administrative element receives a not-well-formed ADU or an administrative record type code which is not able to be processed by the element, the record <bcp14>SHALL</bcp14> be ignored by the element.
+The processing of a received administrative record ADU do not affect the fact that the bundle itself was delivered to the administrative element or any related BPA processing of (e.g. status reports on) the enveloping bundle.
       </t>
     </section>
     <section anchor="sec-security">
