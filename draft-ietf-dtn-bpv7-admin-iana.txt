@@ -4,13 +4,13 @@
 
 Delay-Tolerant Networking                                       B. Sipos
 Internet-Draft                                                   JHU/APL
-Updates: 9171 (if approved)                                 7 March 2023
+Updates: 9171 (if approved)                                9 August 2023
 Intended status: Standards Track                                        
-Expires: 8 September 2023
+Expires: 10 February 2024
 
 
      Bundle Protocol Version 7 Administrative Record Types Registry
-                   draft-ietf-dtn-bpv7-admin-iana-01
+                   draft-ietf-dtn-bpv7-admin-iana-02
 
 Abstract
 
@@ -34,7 +34,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 8 September 2023.
+   This Internet-Draft will expire on 10 February 2024.
 
 Copyright Notice
 
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Sipos                   Expires 8 September 2023                [Page 1]
+Sipos                   Expires 10 February 2024                [Page 1]
 
-Internet-Draft               BPv7 Admin IANA                  March 2023
+Internet-Draft               BPv7 Admin IANA                 August 2023
 
 
 Table of Contents
@@ -66,7 +66,7 @@ Table of Contents
    2.  Administrative Record Types Registry  . . . . . . . . . . . .   3
    3.  Security Considerations . . . . . . . . . . . . . . . . . . .   3
    4.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   3
-     4.1.  Bundle Administrative Record Types  . . . . . . . . . . .   3
+     4.1.  Bundle Administrative Record Types  . . . . . . . . . . .   4
    5.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   4
      5.1.  Normative References  . . . . . . . . . . . . . . . . . .   4
      5.2.  Informative References  . . . . . . . . . . . . . . . . .   5
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Sipos                   Expires 8 September 2023                [Page 2]
+Sipos                   Expires 10 February 2024                [Page 2]
 
-Internet-Draft               BPv7 Admin IANA                  March 2023
+Internet-Draft               BPv7 Admin IANA                 August 2023
 
 
 1.2.  Terminology
@@ -132,11 +132,19 @@ Internet-Draft               BPv7 Admin IANA                  March 2023
    the IANA registry.  To avoid a collision, this document adds that
    allocation to the registry.
 
-   Instead of using the explicit list of types in Table 3 of [RFC9171],
-   a BPv7 Agent SHALL interpret Administrative Record type code values
-   in accordance with the IANA "Bundle Administrative Record Types" sub-
-   registry under [IANA-BP] for entries having a "Bundle Protocol
-   Version" of 7.
+   Instead of using the explicit list of types in Section 6.1 of
+   [RFC9171], a BPv7 administrative element SHALL interpret
+   administrative record type code values in accordance with the IANA
+   "Bundle Administrative Record Types" sub-registry under [IANA-BP] for
+   entries having a "Bundle Protocol Version" of 7.
+
+   If an administrative element receives a not-well-formed ADU or an
+   administrative record type code which is not able to be processed by
+   the element, the record SHALL be ignored by the element.  The
+   processing of a received administrative record ADU do not affect the
+   fact that the bundle itself was delivered to the administrative
+   element or any related BPA processing of (e.g. status reports on) the
+   enveloping bundle.
 
 3.  Security Considerations
 
@@ -150,6 +158,18 @@ Internet-Draft               BPv7 Admin IANA                  March 2023
 
    This specification modifies a BPv6 sub-registry to extend BPv7.
 
+
+
+
+
+
+
+
+Sipos                   Expires 10 February 2024                [Page 3]
+
+Internet-Draft               BPv7 Admin IANA                 August 2023
+
+
 4.1.  Bundle Administrative Record Types
 
    Within the "Bundle Protocol" registry [IANA-BP], the "Bundle
@@ -158,17 +178,6 @@ Internet-Draft               BPv7 Admin IANA                  March 2023
    added and existing entries have been updated to have BP versions as
    in the following table.  This document makes no changes to the
    registration procedures for this sub-registry.
-
-
-
-
-
-
-
-Sipos                   Expires 8 September 2023                [Page 3]
-
-Internet-Draft               BPv7 Admin IANA                  March 2023
-
 
    +=================+============+==================+=================+
    | Bundle Protocol | Value      | Description      | Reference       |
@@ -210,6 +219,13 @@ Internet-Draft               BPv7 Admin IANA                  March 2023
               DOI 10.17487/RFC2119, March 1997,
               <https://www.rfc-editor.org/info/rfc2119>.
 
+
+
+Sipos                   Expires 10 February 2024                [Page 4]
+
+Internet-Draft               BPv7 Admin IANA                 August 2023
+
+
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/info/rfc8174>.
@@ -217,14 +233,6 @@ Internet-Draft               BPv7 Admin IANA                  March 2023
    [RFC9171]  Burleigh, S., Fall, K., and E. Birrane, III, "Bundle
               Protocol Version 7", RFC 9171, DOI 10.17487/RFC9171,
               January 2022, <https://www.rfc-editor.org/info/rfc9171>.
-
-
-
-
-Sipos                   Expires 8 September 2023                [Page 4]
-
-Internet-Draft               BPv7 Admin IANA                  March 2023
-
 
 5.2.  Informative References
 
@@ -269,12 +277,4 @@ Author's Address
 
 
 
-
-
-
-
-
-
-
-
-Sipos                   Expires 8 September 2023                [Page 5]
+Sipos                   Expires 10 February 2024                [Page 5]
