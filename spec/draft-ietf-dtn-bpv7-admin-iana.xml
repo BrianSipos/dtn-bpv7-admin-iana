@@ -35,7 +35,7 @@ It also makes a code point reservation for private or experimental use.
       <name>Introduction</name>
       <t>
 The earlier Bundle Protocol (BP) Version 6 (BPv6) defined an IANA sub-registry for Administrative Record type code points under <xref target="IANA-BP"/>.
-When Bundle Protocol Version 7 (BPv7) was published in <xref target="RFC9171"/> it identified the IANA sub-registry for Administrative Record types but did not update the table to be explicit about which entires applied to which Bundle Protocol version(s).
+When Bundle Protocol Version 7 (BPv7) was published in <xref target="RFC9171"/> it identified the IANA sub-registry for Administrative Record types but did not update the table to be explicit about which entries applied to which Bundle Protocol version(s).
 The BPv7 specification also did not discriminate between code point reservations and unassigned ranges for Administrative Record types.
       </t>
       <t>
