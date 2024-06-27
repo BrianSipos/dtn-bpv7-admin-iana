@@ -80,7 +80,7 @@ Table of Contents
    [IANA-BP].  When Bundle Protocol Version 7 (BPv7) was published in
    [RFC9171] it identified the IANA sub-registry for Administrative
    Record types but did not update the table to be explicit about which
-   entires applied to which Bundle Protocol version(s).  The BPv7
+   entries applied to which Bundle Protocol version(s).  The BPv7
    specification also did not discriminate between code point
    reservations and unassigned ranges for Administrative Record types.
 
