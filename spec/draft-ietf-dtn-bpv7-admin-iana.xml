@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?rfc toc="yes"?>
-<rfc xmlns:xi="http://www.w3.org/2001/XInclude" category="std" consensus="true" docName="draft-ietf-dtn-bpv7-admin-iana-03" ipr="trust200902" submissionType="IETF" tocInclude="true" updates="9171" version="3">
+<rfc xmlns:xi="http://www.w3.org/2001/XInclude" category="std" consensus="true" docName="draft-ietf-dtn-bpv7-admin-iana-04" ipr="trust200902" submissionType="IETF" tocInclude="true" updates="9171" version="3">
   <front>
     <title abbrev="BPv7 Admin IANA">
 Bundle Protocol Version 7 Administrative Record Types Registry
     </title>
-    <seriesInfo name="Internet-Draft" value="draft-ietf-dtn-bpv7-admin-iana-03"/>
+    <seriesInfo name="Internet-Draft" value="draft-ietf-dtn-bpv7-admin-iana-04"/>
     <author fullname="Brian Sipos" initials="B." surname="Sipos">
       <organization abbrev="JHU/APL">The Johns Hopkins University Applied Physics Laboratory</organization>
       <address>
@@ -25,7 +25,7 @@ Bundle Protocol Version 7 Administrative Record Types Registry
     <keyword>DTN</keyword>
     <abstract>
       <t>
-This document updates RFC 9171 to clarify that a Bundle Protocol Version 7 agent is intended to use an IANA sub-registry for Administrative Record types.
+This document updates RFC 9171 to clarify that a Bundle Protocol Version 7 agent is intended to use an IANA registry for Administrative Record types.
 It also makes a code point reservation for private or experimental use.
       </t>
     </abstract>
@@ -34,8 +34,8 @@ It also makes a code point reservation for private or experimental use.
     <section anchor="sec-intro">
       <name>Introduction</name>
       <t>
-The earlier Bundle Protocol (BP) Version 6 (BPv6) defined an IANA sub-registry for Administrative Record type code points under <xref target="IANA-BP"/>.
-When Bundle Protocol Version 7 (BPv7) was published in <xref target="RFC9171"/> it identified the IANA sub-registry for Administrative Record types but did not update the table to be explicit about which entries applied to which Bundle Protocol version(s).
+The earlier Bundle Protocol (BP) Version 6 (BPv6) defined an IANA registry for Administrative Record type code points under <xref target="IANA-BP"/>.
+When Bundle Protocol Version 7 (BPv7) was published in <xref target="RFC9171"/> it identified the IANA registry for Administrative Record types but did not update the table to be explicit about which entries applied to which Bundle Protocol version(s).
 The BPv7 specification also did not discriminate between code point reservations and unassigned ranges for Administrative Record types.
       </t>
       <t>
@@ -46,7 +46,7 @@ This document also makes a reservation of high-valued code points for private or
       <section>
         <name>Scope</name>
         <t>
-This document describes updates to the IANA Administrative Record type sub-registry and how a BPv7 agent is supposed to use that registry for identifying Administrative Record types.
+This document describes updates to the IANA Administrative Record type registry and how a BPv7 agent is supposed to use that registry for identifying Administrative Record types.
         </t>
         <t>
 This document does not specify how BPv6 and BPv7 can interoperate for overlapping code points or how a specific code point is to be interpreted either similarly or differently between Bundle Protocol versions.
@@ -63,14 +63,14 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
     <section anchor="sec-bpv7-admin-type">
       <name>Administrative Record Types Registry</name>
       <t>
-This document updates the requirements in <xref section="6.1" target="RFC9171"/> to use an existing IANA registry and updates that sub-registry in <xref target="sec-iana-bp-admin-type"/>.
+This document updates the requirements in <xref section="6.1" target="RFC9171"/> to use an existing IANA registry and updates that registry in <xref target="sec-iana-bp-admin-type"/>.
       </t>
       <t>
 The code point allocated in Annex D of <xref target="CCSDS-BP"/> was never added to the IANA registry.
 To avoid a collision, this document adds that allocation to the registry.
       </t>
       <t>
-Instead of using the list of types in <xref section="6.1" target="RFC9171"/>, a BPv7 administrative element <bcp14>SHALL</bcp14> interpret administrative record type code values in accordance with the IANA "Bundle Administrative Record Types" sub-registry under <xref target="IANA-BP"/> for entries having a "Bundle Protocol Version" of 7.
+Instead of using the list of types in <xref section="6.1" target="RFC9171"/>, a BPv7 administrative element <bcp14>SHALL</bcp14> interpret administrative record type code values in accordance with the IANA "Bundle Administrative Record Types" registry under <xref target="IANA-BP"/> for entries having a "Bundle Protocol Version" of 7.
       </t>
       <t>
 If an administrative element receives a not-well-formed ADU or an administrative record type code which is not able to be processed by the element, the record <bcp14>SHALL</bcp14> be ignored by the element.
@@ -83,20 +83,20 @@ The processing of a received administrative record ADU does not affect the fact 
 This document does not define any requirements or structures which introduce new security considerations.
       </t>
       <t>
-The existing security considerations of <xref target="RFC9171"/> still apply when using the IANA Administrative Record Types sub-registry.
+The existing security considerations of <xref target="RFC9171"/> still apply when using the IANA Administrative Record Types registry.
       </t>
     </section>
     <section anchor="sec-iana">
       <name>IANA Considerations</name>
       <t>
-This specification modifies a BPv6 sub-registry to extend BPv7.
+This specification modifies a BPv6 registry to extend BPv7.
       </t>
       <section anchor="sec-iana-bp-admin-type">
         <name>Bundle Administrative Record Types</name>
         <t>
-Within the "Bundle Protocol" registry <xref target="IANA-BP"/>, the "Bundle Administrative Record Types" sub-registry has been updated to include a leftmost "Bundle Protocol Version" column.
+Within the "Bundle Protocol" registry group <xref target="IANA-BP"/>, the "Bundle Administrative Record Types" registry has been updated to include a leftmost "Bundle Protocol Version" column.
 New entries have been added and existing entries have been updated to have BP versions as in the following table.
-This document makes no changes to the registration procedures for this sub-registry.
+This document makes no changes to the registration procedures for this registry.
         </t>
         <table>
           <name>Bundle Administrative Record Types</name>
