@@ -26,7 +26,7 @@ Bundle Protocol Version 7 Administrative Record Types Registry
     <abstract>
       <t>
 This document updates RFC 9171 to clarify that a Bundle Protocol Version 7 agent is intended to use an IANA registry for Administrative Record types.
-It also makes a code point reservation for private or experimental use.
+It also makes a code point reservations for private and experimental use.
       </t>
     </abstract>
   </front>
@@ -41,7 +41,7 @@ The BPv7 specification also did not discriminate between code point reservations
       <t>
 This document updates BPv7 to explicitly use the IANA Administrative Record type registry in <xref target="sec-bpv7-admin-type"/>.
 This document makes a reservation of the zero value for consistency with BPv6.
-This document also makes a reservation of high-valued code points for private or experimental use to avoid collisions with assigned code points.
+This document also makes a reservation of high-valued code points for private use and experimental use in accordance with <xref target="RFC8126"/> to avoid collisions with assigned code points.
       </t>
       <section>
         <name>Scope</name>
@@ -151,20 +151,26 @@ This document makes no changes to the registration procedures for this registry.
             </tr>
             <tr>
               <td>6,7</td>
-              <td>5-15</td>
+              <td>5 to 15</td>
               <td>Unassigned</td>
               <td/>
             </tr>
             <tr>
               <td>7</td>
-              <td>16-65535</td>
+              <td>16 to 64383</td>
               <td>Unassigned</td>
               <td/>
             </tr>
             <tr>
               <td>7</td>
-              <td>greater than 65535</td>
-              <td>Reserved for Private or Experimental Use</td>
+              <td>64384 to 64511</td>
+              <td>Reserved for experimental use</td>
+              <td>[This specification]</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>64512 to 65535</td>
+              <td>Reserved for private use</td>
               <td>[This specification]</td>
             </tr>
           </tbody>
